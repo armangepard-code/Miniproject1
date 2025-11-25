@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Motivation Generator</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    #quoteBox {
+      font-size: 24px;
+      margin-top: 40px;
+      min-height: 60px;
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: crimson;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: gold;
+      color: black;
+    }
+  </style>
+</head>
+
+ <body>
+
+  <h1>Daily Villain Energy</h1>
+
+  <button onclick="generateQuote()">Generate Motivation</button>
+
+  <div id="quoteBox"></div>
+
+  <script>
+    const quotes = [
+      "Discipline over everything.",
+      "Cold mind. Sharp focus.",
+      "The reborn version of you arrives March 5.",
+      "You build in silence.",
+      "No excuses. Only progress.",
+      "Pain turns into power.",
+      "You are becoming the Cold Architect.",
+      "Focus beats talent.",
+      "Your future self is watching.",
+      "The arc continues.",
+"Power grows in the shadows, not in the spotlight.",
+"Emotion clouds judgment; strategy conquers all.",
+     "Your empire is built one choice at a time.",
+     "Patience is the weapon of the unstoppable.",
+     "Observe. Plan. Execute. Win.",
+     "Control yourself, control the world.",
+     "Winter doesn’t rush; it arrives and freezes everything in place.",
+     "Weakness has no place in your kingdom of thought.",
+     "Your legacy is forged in silence and precision."
+    ];
+
+   function generateQuote() {
+    const random = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quoteBox").innerHTML = quotes[random];
+  }
+</script>
+
+</body>
+</html>
